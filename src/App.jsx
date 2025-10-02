@@ -3,9 +3,7 @@ import Header from "./components/Header"
 import Note from "./components/Note"
 import Footer from "./components/Footer"
 import Form from "./components/Form"
-
-
-
+import "./App.css"
 
 
 function App() {
@@ -56,16 +54,18 @@ function App() {
 
       <Form onSubmit={formSubmit} />
 
-      {allSecrets.map(secret =>
-        <Note
-          key={secret.id}
-          title={secret.title}
-          content={secret.content}
-          id={secret.id}
-          onDelete={deleteSecret}
-          onEdit={editSecret}
-        />
-      )}
+      <div className="notes-container">
+        {allSecrets.map(secret =>
+          <Note
+            key={secret.id}
+            title={secret.title}
+            content={secret.content}
+            id={secret.id}
+            onDelete={deleteSecret}
+            onEdit={editSecret}
+          />
+        )}
+      </div>
       <Footer />
     </div>
   )

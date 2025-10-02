@@ -53,7 +53,7 @@ function Note(props) {
             <div className="note-edit-container">
                 <div className="note-input-container">
                     <input name="title" className="note-input" onChange={handleInput} type="text" value={editSecret.title} />
-                    <input name="content" className="note-input" onChange={handleInput} type="text" value={editSecret.content} />
+                    <input name="content" maxLength="150" className="note-input" onChange={handleInput} type="text" value={editSecret.content} />
                 </div>
                 <div className="done-icon-container">
                     <DoneOutlineIcon className="done-icon" onClick={checkEdit} />

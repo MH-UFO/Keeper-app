@@ -54,7 +54,10 @@ function Form(props) {
                 onChange={handleInput}
                 placeholder="Write the content of your secret"
                 rows="3"
-                required></textarea> : null}
+                required
+                maxLength="150"></textarea> : null}
+            {inputFocus && <p className="char-counter">{150 - secret.content.length} characters remaining</p>}
+
             <Zoom in={inputFocus}>
                 <div className="fab-container">
                     <Fab className="Fab" type="submit" size="small"><AddIcon /></Fab>

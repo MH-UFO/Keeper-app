@@ -74,6 +74,8 @@ footer p {
   white-space: pre-wrap;
   word-wrap: break-word;
   color: #555;
+  max-height: 200px;
+  overflow-y: auto;
 }
 
 .note .edit-icon {
@@ -203,12 +205,41 @@ form.create-note .Fab:hover {
   transform: scale(1.1);
 }
 
+.char-counter {
+  font-size: 0.8em;
+  color: #888;
+  text-align: right;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
 @media (max-width: 768px) {
-  form {
-    width: 100%;
+  form.create-note {
+    width: 90%;
+    margin: 30px auto 20px auto;
   }
   .note {
-    width: 100%;
-    margin: 20px 0;
+    width: 90%;
+    margin: 20px auto;
+    float: none;
   }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .note {
+    width: calc(50% - 40px);
+  }
+}
+
+@media (min-width: 1201px) {
+  .note {
+    width: calc(25% - 40px);
+  }
+}
+
+.notes-container {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
