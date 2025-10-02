@@ -1,0 +1,214 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background: #f0f0f0;
+  padding: 0 0px;
+  background-image: url("https://www.transparenttextures.com/patterns/subtle-grey.png");
+  overflow-x: hidden;
+}
+
+header {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  margin: auto -16px;
+  padding: 20px 32px;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+header h1 {
+  color: #fff;
+  font-family: "McLaren", cursive;
+  font-weight: 400;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3.5rem;
+  background-color: #fff;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  color: #888;
+}
+.note {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 15px;
+  width: 260px;
+  margin: 20px;
+  margin-left: 25px;
+  float: left;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.note:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.note h1 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+.note p {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  color: #555;
+}
+
+.note .edit-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #f39c12;
+}
+
+.note .delete-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #e74c3c;
+}
+
+.note-edit-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.note-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.done-icon-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.note .done-icon {
+  cursor: pointer;
+  color: #2ecc71;
+}
+
+.note-input {
+  width: 100%;
+  border: none;
+  padding: 8px;
+  outline: none;
+  font-size: 1.1em;
+  font-family: inherit;
+  resize: none;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.note button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #e74c3c;
+  border: none;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  outline: none;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.note button:hover {
+  color: #c0392b;
+  transform: scale(1.1);
+}
+
+form.create-note {
+  position: relative;
+  width: 520px;
+  margin: 30px auto 20px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+form.create-note:focus-within {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+form.create-note input,
+form.create-note textarea {
+  width: 100%;
+  border: none;
+  padding: 8px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+form.create-note textarea {
+  font-size: 13pt;  
+}
+
+.fab-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px; /* Adjust the gap between icons as needed */
+}
+
+form.create-note .Fab {
+  background: #2ecc71;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+form.create-note .Fab:hover {
+  background: #27ae60;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  form {
+    width: 100%;
+  }
+  .note {
+    width: 100%;
+    margin: 20px 0;
+  }
+}
